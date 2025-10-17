@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="faviconIMC.ico" type="image/x-icon">
-    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="imagens/laranja2.ico" type="image/x-icon">
+    <title>Calculadora IMC - ASCII Challenge</title>
 </head>
 <body>
-    <h1>Calculadora de IMC</h1>
-    <h2>Descubra o seu IMC e entenda melhor sua saúde</h2>
-    <h2>O que é o IMC? </h2>
+    
+    <header>
+        <h1>Calculadora de IMC</h1>
+        <h2 class="subtitulo">Descubra o seu IMC e entenda melhor sua saúde.</h2> 
+    </header>
+
+    <main>
+        <section id="calculadora" class="card">
+            <h2>Calcule Agora</h2>
+            
+            <form id="imc-form"> 
+                <div class="input-group">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" step="0.1" placeholder="Ex: 70" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="altura">Altura (m):</label>
+                    <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75" required>
+                </div>
+                
+                <div class="botoes-grupo">
+                    <button type="reset" class="btn-limpar">Limpar</button> 
+                    <button type="submit" class="btn-calcular">Calcular</button> 
+                </div>
+            </form>
+
+            <div id="resultado" class="resultado-box" style="display: none;">
+                </div>
+        </section>
+        
+        <section id="explicacao-imc">
+            <h3>O que é o IMC?</h3>
+            <p>O Índice de Massa Corporal (IMC) é uma forma simples e internacionalmente aceita de saber se o seu peso está adequado para a sua altura. Ele é calculado dividindo o seu peso (em quilos) pela sua altura (em metros) elevada ao quadrado. O resultado nos ajuda a classificar seu estado de saúde, indicando se você está na faixa de peso saudável, abaixo do peso, com sobrepeso ou obesidade. Lembre-se que o IMC é apenas uma estimativa; para uma avaliação completa, consulte sempre um profissional de saúde.</p>
+        </section>
+
+        <section id="classificacao-imc">
+            <h3>Classificação de IMC (Adultos)</h3>
+            <p>Abaixo do peso: menos de 18.5</p>
+            <p>Peso normal: 18.5 a 24.9</p>
+            <p>Sobrepeso: 25 a 29.9</p>
+            <p>Obesidade Grau I: 30 a 34.9</p>
+            <p>Obesidade Grau II: 35 a 39.9</p>
+            <p>Obesidade Grau III: 40 ou mais</p>
+        </section>
+        <section id="limitacoes-imc">
+            <h3>Importante: Limitações do IMC</h3>
+            <p>Lembre-se: O IMC é uma ferramenta de triagem rápida e não deve ser o único indicador de saúde. Ele não leva em conta fatores essenciais como a distribuição de gordura corporal, massa muscular e histórico clínico.</p>
+        </section>
+    </main>
+    
+    <script src="script.js" defer></script> 
 </body>
 </html>
