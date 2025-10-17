@@ -1,0 +1,139 @@
+/* 1. Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9; 
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0; 
+}
+
+/* 2. Layout Principal (Header e Main) */
+header {
+    width: 100%;
+    background-color: #ffffff; 
+    padding: 30px 20px; 
+    text-align: center;
+    border-bottom: 1px solid #ddd; 
+    margin-bottom: 25px;
+}
+
+main {
+    width: 100%;
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 0 20px 40px; 
+}
+
+h1 { font-size: 2em; color: #222; margin-bottom: 5px; }
+.subtitulo { color: #666; font-size: 1.1em; }
+h3 { 
+    color: #4CAF50; /* Verde Principal */
+    margin-bottom: 10px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 5px; 
+}
+
+/* 3. Estilização das Seções e Calculadora (Bordas Verdes Escuras) */
+#explicacao-imc, #classificacao-imc, #limitacoes-imc {
+    padding: 20px;
+    background-color: #f8fff8; 
+    border-radius: 8px;
+    border: 1px solid #1E8449; /* Borda Verde Escura */
+    line-height: 1.5;
+}
+
+#calculadora {
+    padding: 30px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    border: 2px solid #1E8449; /* Borda Verde Escura mais grossa */
+    text-align: center;
+}
+
+/* 4. Formulário e Inputs */
+#imc-form { text-align: left; margin-top: 10px; }
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+
+.input-group input { 
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 1em; 
+}
+.input-group input:focus { border-color: #1E8449; outline: none; } 
+
+/* 5. Imagem de Vegetais (Responsiva e Integrada) */
+.imagem-formulario-container {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.imagem-formulario {
+    max-width: 50%; /* Limita a largura da imagem */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* 6. Botões (Microinterações) */
+.botoes-grupo { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.botoes-grupo button { 
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-limpar { background-color: #e0e0e0; color: #555; }
+.btn-calcular { 
+    background-color: #4CAF50; /* Verde Principal */
+    color: #ffffff; 
+}
+.btn-calcular:hover { 
+    background-color: #388E3C; 
+}
+
+/* 7. Estilização dos Resultados */
+#classificacao-imc p { padding: 5px 0; border-bottom: 1px dashed #eee; margin: 0; }
+#classificacao-imc p:last-child { border-bottom: none; }
+
+.resultado-box { 
+    margin-top: 20px; 
+    padding: 15px; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    text-align: center; 
+    border: 1px solid transparent; 
+}
+
+/* 8. Responsividade (CRUCIAL!) */
+@media (max-width: 600px) {
+    header { padding: 30px 15px; }
+    main { padding: 0 15px 30px; }
+    h1 { font-size: 1.8em; }
+
+    /* Faz os botões ficarem empilhados em telas pequenas */
+    .botoes-grupo { flex-direction: column; gap: 10px; }
+    .botoes-grupo button { width: 100%; }
+    
+    /* Permite que a imagem ocupe mais espaço em mobile */
+    .imagem-formulario {
+        max-width: 75%; 
+    }
+}
