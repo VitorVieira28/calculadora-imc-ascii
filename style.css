@@ -1,4 +1,3 @@
-/* 1. Reset Básico e Estilos Globais */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +15,7 @@ body {
     padding: 0; 
 }
 
-/* 2. Layout Principal (Header e Main) */
+
 header {
     width: 100%;
     background-color: #ffffff; 
@@ -38,18 +37,18 @@ main {
 h1 { font-size: 2em; color: #222; margin-bottom: 5px; }
 .subtitulo { color: #666; font-size: 1.1em; }
 h3 { 
-    color: #4CAF50; /* Verde Principal */
+    color: #4CAF50; 
     margin-bottom: 10px; 
     border-bottom: 1px solid #eee; 
     padding-bottom: 5px; 
 }
 
-/* 3. Estilização das Seções e Calculadora (Bordas Verdes Escuras) */
+
 #explicacao-imc, #classificacao-imc, #limitacoes-imc {
     padding: 20px;
     background-color: #f8fff8; 
     border-radius: 8px;
-    border: 1px solid #1E8449; /* Borda Verde Escura */
+    border: 1px solid #1E8449; 
     line-height: 1.5;
 }
 
@@ -57,11 +56,11 @@ h3 {
     padding: 30px;
     background-color: #ffffff; 
     border-radius: 8px;
-    border: 2px solid #1E8449; /* Borda Verde Escura mais grossa */
+    border: 2px solid #1E8449; 
     text-align: center;
 }
 
-/* 4. Formulário e Inputs */
+
 #imc-form { text-align: left; margin-top: 10px; }
 .input-group { margin-bottom: 15px; }
 .input-group label { display: block; margin-bottom: 5px; font-weight: bold; }
@@ -75,7 +74,7 @@ h3 {
 }
 .input-group input:focus { border-color: #1E8449; outline: none; } 
 
-/* 5. Imagem de Vegetais (Responsiva e Integrada) */
+
 .imagem-formulario-container {
     margin-top: 20px; 
     margin-bottom: 20px; 
@@ -83,13 +82,13 @@ h3 {
 }
 
 .imagem-formulario {
-    max-width: 50%; /* Limita a largura da imagem */
+    max-width: 50%; 
     height: auto; 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* 6. Botões (Microinterações) */
+
 .botoes-grupo { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
 .botoes-grupo button { 
     padding: 10px 15px; 
@@ -102,14 +101,14 @@ h3 {
 
 .btn-limpar { background-color: #e0e0e0; color: #555; }
 .btn-calcular { 
-    background-color: #4CAF50; /* Verde Principal */
+    background-color: #4CAF50; 
     color: #ffffff; 
 }
 .btn-calcular:hover { 
     background-color: #388E3C; 
 }
 
-/* 7. Estilização dos Resultados */
+
 #classificacao-imc p { padding: 5px 0; border-bottom: 1px dashed #eee; margin: 0; }
 #classificacao-imc p:last-child { border-bottom: none; }
 
@@ -122,17 +121,17 @@ h3 {
     border: 1px solid transparent; 
 }
 
-/* 8. Responsividade (CRUCIAL!) */
+
 @media (max-width: 600px) {
     header { padding: 30px 15px; }
     main { padding: 0 15px 30px; }
     h1 { font-size: 1.8em; }
 
-    /* Faz os botões ficarem empilhados em telas pequenas */
+    
     .botoes-grupo { flex-direction: column; gap: 10px; }
     .botoes-grupo button { width: 100%; }
     
-    /* Permite que a imagem ocupe mais espaço em mobile */
+    
     .imagem-formulario {
         max-width: 75%; 
     }
